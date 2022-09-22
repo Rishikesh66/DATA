@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int a[5] = {25,40,5,68,94}, i = 0, k;
+    printf("Enter element you want to search: ");
+    scanf("%d", &k);
+    int l = 0, h = 4, m = (l + h) / 2;
+    while (l <= h)
+    {
+
+        if (k == a[m])
+        {
+            printf("Found at %d", m);
+            break;
+        }
+        else if (k > a[m])
+        {
+            l = m + 1;
+            m = (l + h) / 2;
+        }
+        else
+        {
+            h = m - 1;
+            m = (l + h) / 2;
+        }
+    }
+    if (l>h)
+        printf("Not Found");
+}
