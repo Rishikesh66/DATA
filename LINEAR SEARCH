@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int a[5]={40,25,18,35,6},i=0,p;
+    printf("Enter the element you want to search: ");
+    scanf("%d",&p);
+    
+    for (i=0;i<5;i++){
+        if(a[i]==p){
+            printf("found element at position %d",i);
+            
+            break;
+        }
+    }
+    if (i==5) printf("Not found");
+
+}
+
+
