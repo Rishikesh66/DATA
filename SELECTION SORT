@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+    int a[6]={9,36,8,48,7,56},i=0,n=6,min,temp;
+    for (i=0;i<n-1;i++){
+        min=i;
+        for (int j=i+1;j<n;j++)
+        {
+            if(a[min]>a[j]){
+                min=j;
+            }
+        }
+        temp=a[i];
+        a[i]=a[min];
+        a[min]=temp;
+    }
+    for (i=0;i<n;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+
+}
+
